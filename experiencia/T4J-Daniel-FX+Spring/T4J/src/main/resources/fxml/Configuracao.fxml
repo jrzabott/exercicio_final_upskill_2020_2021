@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="300.0" maxWidth="400.0" minHeight="300.0" minWidth="400.0" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="t4j.app.ui.ConfiguracaoController">
+    <children>
+        <Label layoutX="41.0" layoutY="105.0" text="Tamanho da Fonte" />
+        <Label layoutX="41.0" layoutY="172.0" text="Tema" />
+        <Slider fx:id="sliderTamanhoFonte" layoutX="177.0" layoutY="106.0" prefHeight="14.0" prefWidth="173.0" />
+        <ChoiceBox fx:id="cbTemasCores" layoutX="177.0" layoutY="168.0" prefHeight="25.0" prefWidth="173.0" />
+        <Button layoutX="114.0" layoutY="237.0" mnemonicParsing="false" onAction="#btnAplicarAction" text="Aplicar" />
+        <Button layoutX="233.0" layoutY="237.0" mnemonicParsing="false" onAction="#btnCancelarAction" text="Cancelar" />
+
+    </children>
+</AnchorPane>

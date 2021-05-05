@@ -1,0 +1,23 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package t4j.app.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import t4j.app.service.HabilitacoesAcademicasService;
+
+/**
+ *
+ * @author Home
+ */
+@Controller
+public class UIHabilitacaoAcademicaController {
+    
+     private Long idGerado;
+     
+      @Autowired
+    HabilitacoesAcademicasService has;
+}

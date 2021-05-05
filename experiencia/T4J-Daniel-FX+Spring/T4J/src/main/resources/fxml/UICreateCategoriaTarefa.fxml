@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="t4j.app.ui.CreateCategoriaTarefa">
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="394.0" minWidth="10.0" prefWidth="146.00006103515625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="853.9999389648438" minWidth="10.0" prefWidth="853.9999389648438" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="120.0" minHeight="120.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="250.6666259765625" minHeight="10.0" prefHeight="250.6666259765625" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="13.3333740234375" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Código" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label text="Descrição" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets right="10.0" top="5.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label text="Competências Técnicas" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="10.0" />
+                    </GridPane.margin>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label text="Área Atividade" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <TextField fx:id="txtFieldCodCategoria" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </TextField>
+                <TextArea fx:id="txtAreaDescCategoria" maxWidth="770.0" minWidth="580.0" prefHeight="120.0" prefWidth="770.0" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                    <padding>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                    </padding>
+                </TextArea>
+                <ComboBox fx:id="cmbAreaAtividadeCategoria" maxWidth="500.0" minWidth="300.0" prefHeight="25.0" prefWidth="500.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </ComboBox>
+                <TableView fx:id="tableViewGrausCompTec" maxWidth="770.0" minWidth="580.0" prefHeight="195.0" prefWidth="770.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <columns>
+                        <TableColumn fx:id="tbColCodigo" editable="false" minWidth="75.0" prefWidth="119.00006103515625" text="Codigo" />
+                        <TableColumn fx:id="tbColNome" editable="false" minWidth="280.0" prefWidth="345.99993896484375" text="Nome" />
+                        <TableColumn fx:id="tbColGrau" minWidth="100.0" prefWidth="166.6666259765625" text="Grau Comp Min" />
+                        <TableColumn fx:id="tbColObrigatorio" minWidth="117.6666259765625" prefWidth="117.6666259765625" text="Obrigatorio" />
+                    </columns>
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </TableView>
+                <Label fx:id="lblWarning" alignment="TOP_RIGHT" text="Label" textAlignment="RIGHT" textFill="#ff0d0d" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets right="45.0" />
+                    </GridPane.margin>
+                </Label>
+            </children>
+            <padding>
+                <Insets top="20.0" />
+            </padding>
+        </GridPane>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" maxHeight="60.0" minHeight="60.0" prefHeight="60.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#btnRegistarCategoria" text="Registar" />
+                <Button mnemonicParsing="false" onAction="#btnLimparRegistarCategoria" text="Limpar" />
+                <Button mnemonicParsing="false" onAction="#btnCancelarRegistarCategoria" text="Cancelar" />
+                <Button mnemonicParsing="false" onAction="#btnPopAction" text="Populatio" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

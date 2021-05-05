@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="t4j.app.ui.SeriarCandidaturasController">
+    <center>
+        <GridPane maxHeight="450.0" maxWidth="900.0" minHeight="450.0" minWidth="900.0" prefHeight="450.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.0" minWidth="10.0" prefWidth="126.33331298828125" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="776.3333740234375" minWidth="10.0" prefWidth="773.6666870117188" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="140.0" minHeight="140.0" prefHeight="140.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="200.0" minHeight="200.0" prefHeight="200.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Anúncio" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <ComboBox fx:id="cmbBoxAnuncio" maxWidth="700.0" minWidth="700.0" prefWidth="700.0" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </ComboBox>
+                <Label text="Classificação" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <TableView fx:id="tableViewClassificacao" maxWidth="700.0" minWidth="700.0" prefHeight="200.0" prefWidth="700.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columns>
+                        <TableColumn fx:id="tableColumnCandidatura" editable="false" prefWidth="256.0" text="Candidatura" />
+                        <TableColumn fx:id="tableColumnClassificacao" prefWidth="189.0" text="Classificação" />
+                        <TableColumn fx:id="tableColumnColaborador" prefWidth="240.0" text="Colaborador" />
+                    </columns>
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </TableView>
+                <Label text="Seriação" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <ListView fx:id="listViewCandidaturasSeriadas" maxHeight="200.0" maxWidth="700.0" minHeight="200.0" minWidth="700.0" prefHeight="200.0" prefWidth="700.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </ListView>
+            </children>
+            <padding>
+                <Insets top="20.0" />
+            </padding>
+        </GridPane>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" maxHeight="60.0" minHeight="60.0" prefHeight="60.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#btnSeriarCandidaturas" text="Seriar" />
+                <Button mnemonicParsing="false" onAction="#btnLimparSeriarCandidaturas" text="Limpar" />
+                <Button mnemonicParsing="false" onAction="#btnCancelarSeriarCandidaturas" text="Cancelar" />
+                <Button fx:id="btnPop" mnemonicParsing="false" onAction="#btnPopAction" text="Populatio" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>
